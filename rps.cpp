@@ -35,7 +35,7 @@ char getcomputerchoice(){
 }
 void showchoice(char choice){
     switch(choice){
-        case 'r':cout<<"Rock\n"<<endl;
+        case 'r':cout<<"Stone\n"<<endl;
         break;
         case 'p':cout<<"Paper\n"<<endl;
         break;
