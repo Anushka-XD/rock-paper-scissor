@@ -1,5 +1,9 @@
 #include <iostream>
 #include <ctime>
+#include <bits/stdc++.h>
+#include <cctype>
+// #include "../../../Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk/usr/include/_ctype.h"
+
 
 using namespace std;
 
@@ -18,6 +22,7 @@ char getuserchoice()
         cout << "enter 's' for scissors " << endl;
         cin >> playerchoice;
     } while (playerchoice != 'r' && playerchoice != 'p' && playerchoice != 's');
+
 
     return playerchoice;
 }
@@ -122,7 +127,7 @@ int main()
     do
     {
         player = getuserchoice();
-        cout << "YOUR CHOICE IS :  ";
+        cout << "YOUR CHOICE IS  ";
         showchoice(player);
         computer = getcomputerchoice();
         cout << "COMP CHOOSE ";
@@ -132,7 +137,12 @@ int main()
         cout << "\nif you wish to play again type 'yes' else 'no' " << endl;
         cin >> again;
         cout << "\n";
-    } while (again == "YES" || again == "yes");
+
+        for (auto &i : again)
+        {
+            i = tolower(i);
+        }
+    } while (again == "yes");
 
     return 0;
 }
