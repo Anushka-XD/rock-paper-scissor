@@ -6,6 +6,8 @@ using namespace std;
 char getuserchoice()
 {
 
+    // You gonna see some magic out here :?
+
     char playerchoice;
     do
     {
