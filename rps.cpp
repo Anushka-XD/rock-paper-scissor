@@ -67,7 +67,7 @@ void choosewinner(char player, char computer)
     case 'r':
         if (computer == 'r')
         {
-            cout << " IT IS A TIE !! " << endl;
+            cout << " IT'S A TIE " << endl;
         }
         else if (computer == 'p')
         {
@@ -97,7 +97,7 @@ void choosewinner(char player, char computer)
     case 's':
         if (computer == 'r')
         {
-            cout << " COMPUTER WON " << endl;
+   cout << " COMPUTER WON " << endl;
         }
         else if (computer == 'p')
         {
