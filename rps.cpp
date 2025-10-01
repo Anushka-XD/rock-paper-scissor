@@ -6,6 +6,10 @@ using namespace std;
 char getuserchoice()
 {
 
+int c1 = 0, c2 = 0, c3 = 0;
+
+    // You gonna see some magic out here :?
+
     char playerchoice;
     do
     {
@@ -22,8 +26,6 @@ char getuserchoice()
     return playerchoice;
 }
 
-int c1 = 0, c2 = 0, c3 = 0;
-
 char getcomputerchoice()
 {
     char compchoice;
@@ -38,7 +40,7 @@ char getcomputerchoice()
     {
         compchoice = 's';
         c2++;
-    }
+
     else
     {
         compchoice = 'p';
@@ -102,7 +104,7 @@ void choosewinner(char player, char computer)
     case 's':
         if (computer == 'r')
         {
-            cout << " COMPUTER WON " << endl;
+   cout << " COMPUTER WON " << endl;
         }
         else if (computer == 'p')
         {
