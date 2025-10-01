@@ -1,12 +1,14 @@
 #include <iostream>
 #include <ctime>
+#include <bits/stdc++.h>
+#include <cctype>
+// #include "../../../Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk/usr/include/_ctype.h"
+
 
 using namespace std;
 
 char getuserchoice()
 {
-
-    // You gonna see some magic out here :?
 
     char playerchoice;
     do
@@ -20,6 +22,7 @@ char getuserchoice()
         cout << "enter 's' for scissors " << endl;
         cin >> playerchoice;
     } while (playerchoice != 'r' && playerchoice != 'p' && playerchoice != 's');
+
 
     return playerchoice;
 }
@@ -49,7 +52,7 @@ void showchoice(char choice)
     switch (choice)
     {
     case 'r':
-        cout << "Stone\n"
+        cout << "Stone / Rock\n"
              << endl;
         break;
     case 'p':
@@ -99,7 +102,7 @@ void choosewinner(char player, char computer)
     case 's':
         if (computer == 'r')
         {
-   cout << " COMPUTER WON " << endl;
+            cout << " COMPUTER WON " << endl;
         }
         else if (computer == 'p')
         {
@@ -132,7 +135,11 @@ int main()
         cout << "\nif you wish to play again type 'yes' else 'no' " << endl;
         cin >> again;
         cout << "\n";
-    } while (again == "YES" || again == "yes");
+        for (auto &i : again)
+        {
+            i = tolower(i);
+        }
+    } while (again == "yes");
 
     return 0;
 }
