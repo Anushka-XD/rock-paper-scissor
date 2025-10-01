@@ -97,7 +97,7 @@ void choosewinner(char player, char computer)
     case 's':
         if (computer == 'r')
         {
-            cout << " COMPUTER WINS " << endl;
+   cout << " COMPUTER WON " << endl;
         }
         else if (computer == 'p')
         {
