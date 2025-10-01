@@ -1,10 +1,18 @@
 #include <iostream>
 #include <ctime>
+#include <bits/stdc++.h>
+#include <cctype>
+// #include "../../../Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk/usr/include/_ctype.h"
+
 
 using namespace std;
 
 char getuserchoice()
 {
+
+int c1 = 0, c2 = 0, c3 = 0;
+
+    // You gonna see some magic out here :?
 
     char playerchoice;
     do
@@ -19,6 +27,7 @@ char getuserchoice()
         cin >> playerchoice;
     } while (playerchoice != 'r' && playerchoice != 'p' && playerchoice != 's');
 
+
     return playerchoice;
 }
 
@@ -26,18 +35,21 @@ char getcomputerchoice()
 {
     char compchoice;
 
-    int num = (rand() % 3);
-    if (num == 0)
+    int num = ((c1 / 2) + rand() % (c1 + c2 + c3));
+    if (num <= c1)
     {
         compchoice = 'r';
+        c1++;
     }
-    else if (num == 1)
+    else if (num <= c1 + c2)
     {
         compchoice = 's';
-    }
+        c2++;
+
     else
     {
         compchoice = 'p';
+        c3++;
     }
 
     return compchoice;
@@ -47,7 +59,7 @@ void showchoice(char choice)
     switch (choice)
     {
     case 'r':
-        cout << "Rock\n"
+        cout << "Stone / Rock\n"
              << endl;
         break;
     case 'p':
@@ -113,6 +125,9 @@ void choosewinner(char player, char computer)
 
 int main()
 {
+    c1 = 1;
+    c2 = 1;
+    c3 = 1;
     char player;
     char computer;
     string again;
@@ -130,7 +145,11 @@ int main()
         cout << "\nif you wish to play again type 'yes' else 'no' " << endl;
         cin >> again;
         cout << "\n";
-    } while (again == "YES" || again == "yes");
+        for (auto &i : again)
+        {
+            i = tolower(i);
+        }
+    } while (again == "yes");
 
     return 0;
 }
