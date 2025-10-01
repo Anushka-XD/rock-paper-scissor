@@ -4,14 +4,11 @@
 #include <cctype>
 // #include "../../../Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk/usr/include/_ctype.h"
 
-
 using namespace std;
+int c1 = 0, c2 = 0, c3 = 0;
 
 char getuserchoice()
 {
-
-int c1 = 0, c2 = 0, c3 = 0;
-
     // You gonna see some magic out here :?
 
     char playerchoice;
@@ -26,7 +23,6 @@ int c1 = 0, c2 = 0, c3 = 0;
         cout << "enter 's' for scissors " << endl;
         cin >> playerchoice;
     } while (playerchoice != 'r' && playerchoice != 'p' && playerchoice != 's');
-
 
     return playerchoice;
 }
@@ -47,7 +43,7 @@ char getcomputerchoice()
     {
         compchoice = 's';
         c2++;
-
+    }
     else
     {
         compchoice = 'p';
