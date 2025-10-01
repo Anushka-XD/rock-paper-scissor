@@ -31,6 +31,8 @@ int c1 = 0, c2 = 0, c3 = 0;
     return playerchoice;
 }
 
+// Computer logic is purely random
+
 char getcomputerchoice()
 {
     char compchoice;
@@ -59,7 +61,7 @@ void showchoice(char choice)
     switch (choice)
     {
     case 'r':
-        cout << "Stone / Rock\n"
+        cout << "Stone\n"
              << endl;
         break;
     case 'p':
@@ -145,6 +147,7 @@ int main()
         cout << "\nif you wish to play again type 'yes' else 'no' " << endl;
         cin >> again;
         cout << "\n";
+
         for (auto &i : again)
         {
             i = tolower(i);
