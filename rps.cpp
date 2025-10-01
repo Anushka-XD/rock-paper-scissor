@@ -4,6 +4,7 @@
 #include <cctype>
 // #include "../../../Library/Developer/CommandLineTools/SDKs/MacOSX15.4.sdk/usr/include/_ctype.h"
 
+
 using namespace std;
 
 char getuserchoice()
@@ -21,6 +22,7 @@ char getuserchoice()
         cout << "enter 's' for scissors " << endl;
         cin >> playerchoice;
     } while (playerchoice != 'r' && playerchoice != 'p' && playerchoice != 's');
+
 
     return playerchoice;
 }
